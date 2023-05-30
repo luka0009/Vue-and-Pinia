@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
 
 body {
   background: #f2f2f2;
@@ -30,4 +30,32 @@ header h1 {
   margin-left: 15px;
   color: #777;
   transform: rotate(2deg);
+}
+
+.task-list {
+  max-width: 640px;
+  margin: 20px auto;
+}
+.task {
+  padding: 6px 20px;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task h3,
+.task .icons {
+  display: inline-block;
+}
+.task .icons {
+  text-align: right;
+}
+.task i {
+  font-size: 1.4em;
+  margin-left: 6px;
+  cursor: pointer;
+  color: #bbb;
 }

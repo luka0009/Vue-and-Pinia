@@ -1,3 +1,13 @@
+<script setup>
+import TaskDetails from "./components/TaskDetails.vue";
+import { useTaskStore } from "./stores/taskStore";
+
+const components = {
+  TaskDetails,
+};
+const taskStore = useTaskStore();
+</script>
+
 <template>
   <div>
     <header>
@@ -7,11 +17,11 @@
       />
       <h1>Practicing vue & pinia</h1>
     </header>
+
+    <div class="task-list">
+      <div v-for="task in taskStore.tasks">
+        <TaskDetails :task="task" />
+      </div>
+    </div>
   </div>
 </template>
-
-<script setup>
-import { useTaskStore } from "./stores/taskStore";
-const taskStore = useTaskStore();
-
-</script>
